@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TECHNOVA 2026 | Events</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+
+        /* =========================================
+           EVENTS PAGE
+           ========================================= */
+
+        .events-page {
+            margin: 0;
+            background: #f5f7fb;
+        }
+
+
+        /* =========================================
+           EVENTS HERO
+           ========================================= */
+
+        .events-hero {
+            text-align: center;
+            padding: 65px 20px 55px;
+            background: linear-gradient(
+                135deg,
+                #0b1220,
+                #111c35,
+                #0b1730
+            );
+            color: white;
+        }
+
+        .events-tag {
+            display: inline-block;
+            padding: 8px 25px;
+            border: 2px solid #00bfff;
+            border-radius: 30px;
+            color: white;
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        .events-hero h1 {
+            margin: 0;
+            font-size: 60px;
+            font-weight: 800;
+            letter-spacing: 3px;
+            line-height: 1.1;
+        }
+
+        .events-hero h1 span {
+            color: #00bfff;
+        }
+
+        .events-year {
+            margin-top: 8px;
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: 7px;
+        }
+
+        .events-hero h2 {
+            margin: 18px 0 15px;
+            font-size: 28px;
+        }
+
+        .events-hero p {
+            max-width: 720px;
+            margin: 0 auto;
+            color: #cbd5e1;
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+        .events-date {
+            margin-top: 22px;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+
+        /* =========================================
+           EVENTS SECTION
+           ========================================= */
+
+        .events-section {
+            padding: 65px 7%;
+        }
+
+        .events-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+
+        /* =========================================
+           EVENT CARD
+           ========================================= */
+
+        .event-card {
+            background: white;
+
+            padding: 32px 25px;
+
+            border-radius: 18px;
+
+            text-align: center;
+
+            border: 1px solid #e2e8f0;
+
+            box-shadow:
+                0 6px 20px rgba(0, 0, 0, 0.07);
+
+            transition: 0.3s;
+        }
+
+        .event-card:hover {
+            transform: translateY(-8px);
+
+            border-color: #00bfff;
+
+            box-shadow:
+                0 12px 30px rgba(0, 0, 0, 0.12);
+        }
+
+
+        /* =========================================
+           EVENT ICON
+           ========================================= */
+
+        .event-card-icon {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+
+
+        /* =========================================
+           EVENT NAME
+           ========================================= */
+
+        .event-card h3 {
+            margin: 5px 0 15px;
+
+            color: #111827;
+
+            font-size: 24px;
+        }
+
+
+        /* =========================================
+           EVENT TYPE
+           ========================================= */
+
+        .event-type {
+            display: inline-block;
+
+            padding: 7px 18px;
+
+            border-radius: 20px;
+
+            background: #e0f7ff;
+
+            color: #0077b6;
+
+            font-size: 14px;
+
+            font-weight: 700;
+
+            margin-bottom: 18px;
+        }
+
+
+        /* =========================================
+           EVENT DESCRIPTION
+           ========================================= */
+
+        .event-card p {
+            color: #64748b;
+
+            font-size: 15px;
+
+            line-height: 1.6;
+
+            min-height: 72px;
+
+            margin-bottom: 18px;
+        }
+
+
+        /* =========================================
+           TEAM / PARTICIPANT INFO
+           ========================================= */
+
+        .event-info {
+            margin: 20px 0;
+
+            padding: 12px;
+
+            background: #f8fafc;
+
+            border-radius: 10px;
+
+            color: #334155;
+
+            font-size: 15px;
+
+            font-weight: 600;
+        }
+
+
+        /* =========================================
+           REGISTER BUTTON
+           ========================================= */
+
+        .event-register-btn {
+            display: inline-block;
+
+            padding: 11px 24px;
+
+            background: #00bfff;
+
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 8px;
+
+            font-weight: 700;
+
+            transition: 0.3s;
+        }
+
+        .event-register-btn:hover {
+            background: #008ed6;
+
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================================
+           BOTTOM REGISTER SECTION
+           ========================================= */
+
+        .events-cta {
+            max-width: 1100px;
+
+            margin: 10px auto 60px;
+
+            padding: 50px 25px;
+
+            background: #111827;
+
+            color: white;
+
+            text-align: center;
+
+            border-radius: 20px;
+        }
+
+        .events-cta h2 {
+            margin-bottom: 10px;
+
+            font-size: 30px;
+        }
+
+        .events-cta p {
+            color: #cbd5e1;
+
+            margin-bottom: 25px;
+        }
+
+        .events-cta a {
+            display: inline-block;
+
+            padding: 13px 28px;
+
+            background: #00bfff;
+
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 8px;
+
+            font-weight: 700;
+
+            transition: 0.3s;
+        }
+
+        .events-cta a:hover {
+            background: #008ed6;
+        }
+
+
+        /* =========================================
+           TABLET
+           ========================================= */
+
+        @media (max-width: 1000px) {
+
+            .events-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+
+        /* =========================================
+           MOBILE
+           ========================================= */
+
+        @media (max-width: 650px) {
+
+            .events-hero {
+                padding: 50px 20px 45px;
+            }
+
+            .events-hero h1 {
+                font-size: 42px;
+            }
+
+            .events-year {
+                font-size: 23px;
+            }
+
+            .events-hero h2 {
+                font-size: 22px;
+            }
+
+            .events-hero p {
+                font-size: 15px;
+            }
+
+            .events-section {
+                padding: 45px 5%;
+            }
+
+            .events-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .event-card {
+                padding: 28px 22px;
+            }
+
+            .events-cta {
+                margin: 10px 5% 40px;
+                padding: 40px 20px;
+            }
+
+            .events-cta h2 {
+                font-size: 26px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body class="events-page">
+
+
+    <!-- =========================================
+         HEADER
+         ========================================= -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                <span>TECHNOVA</span>
+            </div>
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="events.html" class="active">
+                        Events
+                    </a>
+                </li>
+
+                <li>
+                    <a href="registration.html">
+                        Register
+                    </a>
+                </li>
+
+                <li>
+                    <a href="rules.html">
+                        Rules
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================================
+         MAIN CONTENT
+         ========================================= -->
+
+    <main>
+
+
+        <!-- =========================================
+             HERO
+             ========================================= -->
+
+        <section class="events-hero">
+
+            <div class="events-tag">
+                CAMPUS FEST
+            </div>
+
+            <h1>
+                TECH<span>NOVA</span>
+            </h1>
+
+            <div class="events-year">
+                2026
+            </div>
+
+            <h2>
+                Technical Competitions & Events
+            </h2>
+
+            <p>
+                Explore our exciting technical competitions
+                and showcase your knowledge, creativity,
+                problem-solving skills and talent.
+            </p>
+
+            <div class="events-date">
+                📅 16 September 2026
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             EVENTS
+             ========================================= -->
+
+        <section class="events-section">
+
+            <div class="events-grid">
+
+
+                <!-- =====================================
+                     1. TECHNICAL QUIZ
+                     ===================================== -->
+
+                <div class="event-card">
+
+                    <div class="event-card-icon">
+                        🧠
+                    </div>
+
+                    <h3>
+                        Technical Quiz
+                    </h3>
+
+                    <div class="event-type">
+                        Team Event
+                    </div>
+
+                    <p>
+                        Challenge your knowledge of computer
+                        science, technology and technical
+                        concepts through an exciting quiz.
+                    </p>
+
+                    <div class="event-info">
+                        👥 Team Size: 2 Participants
+                    </div>
+
+                    <a
+                        href="registration.html"
+                        class="event-register-btn"
+                    >
+                        Register Now
+                    </a>
+
+                </div>
+
+
+                <!-- =====================================
+                     2. PAPER PRESENTATION
+                     ===================================== -->
+
+                <div class="event-card">
+
+                    <div class="event-card-icon">
+                        📄
+                    </div>
+
+                    <h3>
+                        Paper Presentation
+                    </h3>
+
+                    <div class="event-type">
+                        Team Event
+                    </div>
+
+                    <p>
+                        Present innovative ideas, research
+                        and emerging technologies before
+                        the judges.
+                    </p>
+
+                    <div class="event-info">
+                        👥 Team Size: 2 Participants
+                    </div>
+
+                    <a
+                        href="registration.html"
+                        class="event-register-btn"
+                    >
+                        Register Now
+                    </a>
+
+                </div>
+
+
+                <!-- =====================================
+                     3. DEBUGGING
+                     ===================================== -->
+
+                <div class="event-card">
+
+                    <div class="event-card-icon">
+                        🐞
+                    </div>
+
+                    <h3>
+                        Debugging
+                    </h3>
+
+                    <div class="event-type">
+                        Individual Event
+                    </div>
+
+                    <p>
+                        Find and fix errors in programs
+                        within the given time and test
+                        your logical thinking skills.
+                    </p>
+
+                    <div class="event-info">
+                        👤 Individual Participant
+                    </div>
+
+                    <a
+                        href="registration.html"
+                        class="event-register-btn"
+                    >
+                        Register Now
+                    </a>
+
+                </div>
+
+
+                <!-- =====================================
+                     4. WEB DESIGNING
+                     ===================================== -->
+
+                <div class="event-card">
+
+                    <div class="event-card-icon">
+                        💻
+                    </div>
+
+                    <h3>
+                        Web Designing
+                    </h3>
+
+                    <div class="event-type">
+                        Individual Event
+                    </div>
+
+                    <p>
+                        Create an attractive and functional
+                        website based on the given theme
+                        or task.
+                    </p>
+
+                    <div class="event-info">
+                        👤 Individual Participant
+                    </div>
+
+                    <a
+                        href="registration.html"
+                        class="event-register-btn"
+                    >
+                        Register Now
+                    </a>
+
+                </div>
+
+
+                <!-- =====================================
+                     5. RAPID FIRE
+                     ===================================== -->
+
+                <div class="event-card">
+
+                    <div class="event-card-icon">
+                        ⚡
+                    </div>
+
+                    <h3>
+                        Rapid Fire
+                    </h3>
+
+                    <div class="event-type">
+                        Individual Event
+                    </div>
+
+                    <p>
+                        Answer challenging questions quickly
+                        and demonstrate your knowledge,
+                        confidence and quick thinking.
+                    </p>
+
+                    <div class="event-info">
+                        👤 Individual Participant
+                    </div>
+
+                    <a
+                        href="registration.html"
+                        class="event-register-btn"
+                    >
+                        Register Now
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             CALL TO ACTION
+             ========================================= -->
+
+        <section class="events-cta">
+
+            <h2>
+                Ready to Take the Challenge?
+            </h2>
+
+            <p>
+                Choose your event and register for
+                TECHNOVA 2026 today!
+            </p>
+
+            <a href="registration.html">
+                Register for TECHNOVA
+            </a>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =========================================
+         FOOTER
+         ========================================= -->
+
+    <footer>
+
+        <p>
+            © 2026 TECHNOVA | TMG College of Arts and Science
+        </p>
+
+        <p>
+            Manimangalam, Tambaram
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

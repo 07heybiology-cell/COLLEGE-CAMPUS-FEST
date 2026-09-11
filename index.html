@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TECHNOVA 2026 | Campus Fest</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+
+        /* =========================================
+           TECHNOVA HOME PAGE
+           ========================================= */
+
+        .home-page {
+            background: #f5f7fb;
+            margin: 0;
+        }
+
+        /* =========================================
+           HERO SECTION
+           ========================================= */
+
+        .hero {
+            min-height: 540px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 70px 20px;
+            background: linear-gradient(
+                135deg,
+                #0b1220,
+                #111c35,
+                #0b1730
+            );
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 950px;
+            width: 100%;
+        }
+
+        /* CAMPUS FEST */
+
+        .hero-tag {
+            display: inline-block;
+            padding: 8px 28px;
+            border: 2px solid #00bfff;
+            border-radius: 30px;
+            color: white;
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 22px;
+        }
+
+        /* TECHNOVA */
+
+        .hero h1 {
+            font-size: 68px;
+            margin: 0;
+            font-weight: 800;
+            letter-spacing: 4px;
+            line-height: 1.1;
+        }
+
+        .hero h1 span {
+            color: #00bfff;
+        }
+
+        /* YEAR */
+
+        .hero-year {
+            font-size: 30px;
+            font-weight: 700;
+            letter-spacing: 8px;
+            margin-top: 8px;
+            color: #ffffff;
+        }
+
+        /* SUBTITLE */
+
+        .hero h2 {
+            font-size: 30px;
+            margin: 18px 0 15px;
+            font-weight: 700;
+        }
+
+        .hero-description {
+            max-width: 720px;
+            margin: 0 auto;
+            color: #cbd5e1;
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+        /* FEST INFORMATION */
+
+        .fest-info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 28px;
+            margin: 28px 0;
+        }
+
+        .fest-info span {
+            font-size: 17px;
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        /* BUTTONS */
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            padding: 14px 30px;
+            border-radius: 9px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .primary-btn {
+            background: #00bfff;
+            color: white;
+        }
+
+        .primary-btn:hover {
+            background: #008ed6;
+            transform: translateY(-3px);
+        }
+
+        .secondary-btn {
+            border: 2px solid #00bfff;
+            color: white;
+        }
+
+        .secondary-btn:hover {
+            background: #00bfff;
+            transform: translateY(-3px);
+        }
+
+
+        /* =========================================
+           COLLEGE INFORMATION
+           ========================================= */
+
+        .college-section {
+            text-align: center;
+            padding: 45px 20px;
+            background: white;
+        }
+
+        .college-section h2 {
+            color: #111827;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .college-section p {
+            color: #64748b;
+            font-size: 17px;
+            margin: 7px 0;
+        }
+
+
+        /* =========================================
+           ABOUT SECTION
+           ========================================= */
+
+        .about-section {
+            padding: 65px 8%;
+            text-align: center;
+            background: #f5f7fb;
+        }
+
+        .about-section h2 {
+            font-size: 34px;
+            color: #111827;
+            margin-bottom: 18px;
+        }
+
+        .about-section h2 span {
+            color: #00bfff;
+        }
+
+        .about-section p {
+            max-width: 800px;
+            margin: auto;
+            color: #475569;
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+
+        /* =========================================
+           EVENTS SECTION
+           ========================================= */
+
+        .home-events {
+            padding: 65px 8%;
+            background: white;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-heading h2 {
+            font-size: 34px;
+            color: #111827;
+            margin-bottom: 10px;
+        }
+
+        .section-heading p {
+            color: #64748b;
+            font-size: 17px;
+        }
+
+        .event-preview {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 18px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .event-box {
+            background: #f8fafc;
+            padding: 28px 18px;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+            transition: 0.3s;
+        }
+
+        .event-box:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.10);
+            border-color: #00bfff;
+        }
+
+        .event-icon {
+            font-size: 38px;
+            margin-bottom: 12px;
+        }
+
+        .event-box h3 {
+            color: #111827;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .event-box p {
+            color: #64748b;
+            line-height: 1.5;
+            font-size: 14px;
+        }
+
+
+        /* =========================================
+           REGISTER SECTION
+           ========================================= */
+
+        .home-register {
+            margin: 60px 8%;
+            padding: 55px 25px;
+            text-align: center;
+            border-radius: 20px;
+            background: #111827;
+            color: white;
+        }
+
+        .home-register h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .home-register p {
+            color: #cbd5e1;
+            margin-bottom: 25px;
+        }
+
+
+        /* =========================================
+           MOBILE RESPONSIVE
+           ========================================= */
+
+        @media (max-width: 1000px) {
+
+            .event-preview {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+        @media (max-width: 768px) {
+
+            .hero {
+                min-height: 500px;
+                padding: 55px 20px;
+            }
+
+            .hero-tag {
+                font-size: 15px;
+                padding: 7px 20px;
+            }
+
+            .hero h1 {
+                font-size: 45px;
+                letter-spacing: 2px;
+            }
+
+            .hero-year {
+                font-size: 24px;
+            }
+
+            .hero h2 {
+                font-size: 23px;
+            }
+
+            .hero-description {
+                font-size: 15px;
+            }
+
+            .fest-info {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .fest-info span {
+                font-size: 15px;
+            }
+
+            .event-preview {
+                grid-template-columns: 1fr;
+            }
+
+            .about-section,
+            .home-events {
+                padding: 45px 5%;
+            }
+
+            .about-section h2,
+            .section-heading h2 {
+                font-size: 28px;
+            }
+
+            .home-register {
+                margin: 40px 5%;
+                padding: 40px 20px;
+            }
+
+            .home-register h2 {
+                font-size: 26px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body class="home-page">
+
+
+    <!-- =========================================
+         HEADER
+         ========================================= -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                <span>CAMPUSFEST</span>
+            </div>
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="index.html" class="active">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="events.html">
+                        Events
+                    </a>
+                </li>
+
+                <li>
+                    <a href="registration.html">
+                        Register
+                    </a>
+                </li>
+
+                <li>
+                    <a href="rules.html">
+                        Rules
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================================
+         MAIN CONTENT
+         ========================================= -->
+
+    <main>
+
+
+        <!-- HERO -->
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <!-- CAMPUS FEST ABOVE TECHNOVA -->
+
+                <div class="hero-tag">
+                    CAMPUS FEST
+                </div>
+
+
+                <!-- TECHNOVA -->
+
+                <h1>
+                    TECH<span>NOVA</span>
+                </h1>
+
+
+                <!-- YEAR -->
+
+                <div class="hero-year">
+                    2026
+                </div>
+
+
+                <!-- SUBTITLE -->
+
+                <h2>
+                    Technical Competitions & Events
+                </h2>
+
+
+                <!-- DESCRIPTION -->
+
+                <p class="hero-description">
+
+                    Welcome to TECHNOVA 2026 — a campus technical fest
+                    where students can showcase their creativity,
+                    technical knowledge, problem-solving skills and talent.
+
+                </p>
+
+
+                <!-- FEST INFORMATION -->
+
+                <div class="fest-info">
+
+                    <span>
+                        📅 16 September 2026
+                    </span>
+
+                    <span>
+                        🎓 Campus Fest
+                    </span>
+
+                    <span>
+                        💻 Technical Competitions
+                    </span>
+
+                </div>
+
+
+                <!-- BUTTONS -->
+
+                <div class="hero-buttons">
+
+                    <a href="registration.html"
+                       class="hero-btn primary-btn">
+
+                        Register Now
+
+                    </a>
+
+
+                    <a href="events.html"
+                       class="hero-btn secondary-btn">
+
+                        Explore Events
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             COLLEGE INFORMATION
+             ========================================= -->
+
+        <section class="college-section">
+
+            <h2>
+                TMG College of Arts and Science
+            </h2>
+
+            <p>
+                Manimangalam, Tambaram
+            </p>
+
+            <p>
+                🎓 Campus Technical Fest
+            </p>
+
+        </section>
+
+
+
+        <!-- =========================================
+             ABOUT TECHNOVA
+             ========================================= -->
+
+        <section class="about-section">
+
+            <h2>
+                About <span>TECHNOVA</span>
+            </h2>
+
+            <p>
+
+                TECHNOVA is a campus technical fest featuring
+                exciting competitions and challenges for students.
+                It provides an opportunity to demonstrate technical
+                skills, creativity, knowledge and problem-solving
+                abilities in a fun and competitive environment.
+
+            </p>
+
+        </section>
+
+
+
+        <!-- =========================================
+             TECHNICAL COMPETITIONS
+             ========================================= -->
+
+        <section class="home-events">
+
+            <div class="section-heading">
+
+                <h2>
+                    Technical Competitions
+                </h2>
+
+                <p>
+                    Explore the exciting events at TECHNOVA 2026
+                </p>
+
+            </div>
+
+
+            <div class="event-preview">
+
+
+                <!-- TECHNICAL QUIZ -->
+
+                <div class="event-box">
+
+                    <div class="event-icon">
+                        🧠
+                    </div>
+
+                    <h3>
+                        Technical Quiz
+                    </h3>
+
+                    <p>
+                        Test your technical knowledge,
+                        logical thinking and quick decision-making.
+                    </p>
+
+                </div>
+
+
+                <!-- PAPER PRESENTATION -->
+
+                <div class="event-box">
+
+                    <div class="event-icon">
+                        📄
+                    </div>
+
+                    <h3>
+                        Paper Presentation
+                    </h3>
+
+                    <p>
+                        Present your innovative ideas
+                        and technical knowledge.
+                    </p>
+
+                </div>
+
+
+                <!-- DEBUGGING -->
+
+                <div class="event-box">
+
+                    <div class="event-icon">
+                        🐞
+                    </div>
+
+                    <h3>
+                        Debugging
+                    </h3>
+
+                    <p>
+                        Find and solve programming errors
+                        within the given time.
+                    </p>
+
+                </div>
+
+
+                <!-- WEB DESIGNING -->
+
+                <div class="event-box">
+
+                    <div class="event-icon">
+                        💻
+                    </div>
+
+                    <h3>
+                        Web Designing
+                    </h3>
+
+                    <p>
+                        Create an attractive and functional
+                        website based on the given task.
+                    </p>
+
+                </div>
+
+
+                <!-- RAPID FIRE -->
+
+                <div class="event-box">
+
+                    <div class="event-icon">
+                        ⚡
+                    </div>
+
+                    <h3>
+                        Rapid Fire
+                    </h3>
+
+                    <p>
+                        Answer challenging questions quickly
+                        and demonstrate your knowledge.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             REGISTER CALL TO ACTION
+             ========================================= -->
+
+        <section class="home-register">
+
+            <h2>
+                Ready to Take the Challenge?
+            </h2>
+
+            <p>
+                Participate in TECHNOVA 2026 and showcase your skills!
+            </p>
+
+            <a href="registration.html"
+               class="hero-btn primary-btn">
+
+                Register for TECHNOVA
+
+            </a>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================================
+         FOOTER
+         ========================================= -->
+
+    <footer>
+
+        <p>
+            © 2026 TECHNOVA | TMG College of Arts and Science
+        </p>
+
+        <p>
+            Manimangalam, Tambaram
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

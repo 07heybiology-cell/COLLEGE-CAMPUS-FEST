@@ -1,0 +1,436 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TECHNOVA - Registration</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <nav class="navbar">
+
+           <div class="logo">
+    <span>TECHNOVA</span>
+</div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="registration.html" class="active">Register</a></li>
+                <li><a href="rules.html">Rules</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+
+    <!-- REGISTRATION -->
+    <section class="registration-section">
+
+        <div class="registration-container">
+
+            <h1>TECHNOVA Registration</h1>
+
+            <p class="registration-subtitle">
+                Register your team for the TECHNOVA events
+            </p>
+
+
+            <form id="registrationForm">
+
+                <!-- EVENT -->
+                <div class="form-group">
+
+                    <label for="event">Select Event</label>
+
+                    <select id="event" name="event" required>
+
+                        <option value="">
+                            -- Select an Event --
+                        </option>
+
+                        <option value="Technical Quiz">
+                            Technical Quiz
+                        </option>
+
+                        <option value="Paper Presentation">
+                            Paper Presentation
+                        </option>
+
+                        <option value="Debugging">
+                            Debugging
+                        </option>
+
+                        <option value="Web Designing">
+                            Web Designing
+                        </option>
+
+                        <option value="Rapid Fire">
+                            Rapid Fire
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- COLLEGE -->
+                <div class="form-group">
+
+                    <label for="college">College Name</label>
+
+                    <input
+                        type="text"
+                        id="college"
+                        name="college"
+                        placeholder="Enter your college name"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- DEPARTMENT -->
+                <div class="form-group">
+
+                    <label for="department">Department</label>
+
+                    <input
+                        type="text"
+                        id="department"
+                        name="department"
+                        placeholder="Enter your department"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- YEAR -->
+                <div class="form-group">
+
+                    <label for="year">Year</label>
+
+                    <select id="year" name="year" required>
+
+                        <option value="">
+                            -- Select Year --
+                        </option>
+
+                        <option value="1st Year">
+                            1st Year
+                        </option>
+
+                        <option value="2nd Year">
+                            2nd Year
+                        </option>
+
+                        <option value="3rd Year">
+                            3rd Year
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- PARTICIPANT 1 -->
+                <div class="participant-box">
+
+                    <h2>Participant 1</h2>
+
+                    <div class="form-group">
+
+                        <label for="name1">Name</label>
+
+                        <input
+                            type="text"
+                            id="name1"
+                            name="name1"
+                            placeholder="Enter participant 1 name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="email1">Email</label>
+
+                        <input
+                            type="email"
+                            id="email1"
+                            name="email1"
+                            placeholder="Enter participant 1 email"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="phone1">Phone Number</label>
+
+                        <input
+                            type="tel"
+                            id="phone1"
+                            name="phone1"
+                            placeholder="Enter participant 1 phone number"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- PARTICIPANT 2 -->
+                <div
+                    class="participant-box"
+                    id="participant2"
+                    style="display: none;"
+                >
+
+                    <h2>Participant 2</h2>
+
+                    <div class="form-group">
+
+                        <label for="name2">Name</label>
+
+                        <input
+                            type="text"
+                            id="name2"
+                            name="name2"
+                            placeholder="Enter participant 2 name"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="email2">Email</label>
+
+                        <input
+                            type="email"
+                            id="email2"
+                            name="email2"
+                            placeholder="Enter participant 2 email"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="phone2">Phone Number</label>
+
+                        <input
+                            type="tel"
+                            id="phone2"
+                            name="phone2"
+                            placeholder="Enter participant 2 phone number"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- SUBMIT -->
+                <button
+                    type="submit"
+                    class="submit-btn"
+                >
+                    Submit Registration
+                </button>
+
+
+                <!-- MESSAGE -->
+                <p id="successMessage"></p>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            © 2026 TECHNOVA | TMG College of Arts and Science
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script>
+
+        /* ==========================================
+           EVENT + PARTICIPANT 2
+           ========================================== */
+
+        const eventSelect =
+            document.getElementById("event");
+
+        const participant2 =
+            document.getElementById("participant2");
+
+        const name2 =
+            document.getElementById("name2");
+
+        const email2 =
+            document.getElementById("email2");
+
+        const phone2 =
+            document.getElementById("phone2");
+
+
+        function updateParticipants() {
+
+            const selectedEvent =
+                eventSelect.value;
+
+
+            /*
+             * Participant 2 is required ONLY for:
+             * 1. Technical Quiz
+             * 2. Paper Presentation
+             */
+
+            if (
+                selectedEvent === "Technical Quiz" ||
+                selectedEvent === "Paper Presentation"
+            ) {
+
+                participant2.style.display = "block";
+
+                name2.required = true;
+                email2.required = true;
+                phone2.required = true;
+
+            }
+
+            /*
+             * All other events have only
+             * Participant 1
+             */
+
+            else {
+
+                participant2.style.display = "none";
+
+                name2.required = false;
+                email2.required = false;
+                phone2.required = false;
+
+                name2.value = "";
+                email2.value = "";
+                phone2.value = "";
+
+            }
+
+        }
+
+
+        eventSelect.addEventListener(
+            "change",
+            updateParticipants
+        );
+
+
+        /* ==========================================
+           GOOGLE SHEETS
+           ========================================== */
+
+        const registrationForm =
+            document.getElementById("registrationForm");
+
+        const successMessage =
+            document.getElementById("successMessage");
+
+
+        const scriptURL =
+            "https://script.google.com/macros/s/AKfycbzUDqGnnYEYaLZke6887YDq0d2WXlDoNMhkvygyR-4T6umZtrKCVTQfHmfyKxF3sXnJEA/exec";
+
+
+        registrationForm.addEventListener(
+            "submit",
+            function(event) {
+
+                event.preventDefault();
+
+
+                successMessage.textContent =
+                    "Submitting registration...";
+
+
+                const formData =
+                    new FormData(registrationForm);
+
+
+                fetch(scriptURL, {
+
+                    method: "POST",
+
+                    mode: "no-cors",
+
+                    body: new URLSearchParams(formData)
+
+                })
+
+                .then(function() {
+
+                    successMessage.textContent =
+                        "✅ You registered successfully! 🎉";
+
+
+                    registrationForm.reset();
+
+
+                    participant2.style.display =
+                        "none";
+
+
+                    name2.required = false;
+                    email2.required = false;
+                    phone2.required = false;
+
+                })
+
+                .catch(function(error) {
+
+                    console.error(error);
+
+                    successMessage.textContent =
+                        "❌ Something went wrong. Please try again.";
+
+                });
+
+            }
+        );
+
+
+        /* Initial state */
+        updateParticipants();
+
+    </script>
+
+</body>
+
+</html>
+```
